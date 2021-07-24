@@ -116,11 +116,11 @@ $indonesia = $indonesia[0];
     <!-- ================== About =================== -->
 
     <!-- ================== Provinsi Data ================== -->
-    <section class="global mt-5">
+    <section class="provinsi mt-5">
       <div class="container">
         <div class="row">
           <div class="col">
-            <p>Daftar Kasus Corona Berdasarkan Provinsi</p>
+            <h6 class="mb-3">Daftar Kasus Corona Berdasarkan Provinsi</h6>
           </div>
         </div>
         <div class="row">
@@ -156,55 +156,12 @@ $indonesia = $indonesia[0];
     </section>
     <!-- ================== END Provinsi Data ================== -->
 
-
-    <!-- ================= Global Data ============== -->
-    <section class="global mt-5">
+        <!-- ================= Data Rumah Sakit Rujukan ============== -->
+        <section class="rumahsakit mt-5">
       <div class="container">
         <div class="row">
           <div class="col">
-            <p>Daftar Kasus Corona Global</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="table tableFixHead">
-                <table>
-                  <thead>
-                    <tr class="judulTable">
-                      <th>NO</th>
-                      <th>Negara</th>
-                      <th>Positif</th>
-                      <th>Sembuh</th>
-                      <th>Meninggal</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php $i= 1; ?>
-                    @foreach($global as $row)
-                    <tr>
-                      <td><?= $i++; ?></td>
-                      <td>{{ $row["attributes"]["Country_Region"] }}</td>
-                      <td>{{ $row["attributes"]["Confirmed"] }}</td>
-                      <td>{{ $row["attributes"]["Recovered"] }}</td>
-                      <td>{{ $row["attributes"]["Deaths"] }}</td>
-                    </tr>
-                    @endforeach
-                  </tbody>
-                </table>
-              </div>
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= END Global Data ============== -->
-
-    <!-- ================= Data Rumah Sakit Rujukan ============== -->
-    <section class="global mt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <p>Daftar Rumah Sakit Rujukan</p>
+            <h6 class="mb-3">Daftar Rumah Sakit Rujukan</h6>
           </div>
         </div>
         <div class="row">
@@ -242,7 +199,52 @@ $indonesia = $indonesia[0];
       </div>
     </section>
 
+    <!-- ================= END Rumah Sakit Data ============== -->
+
+
+    <!-- ================= Global Data ============== -->
+    <section class="global mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h6 class="mb-3">Daftar Kasus Corona Global</h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="table tableFixHead">
+                <table>
+                  <thead>
+                    <tr class="judulTable">
+                      <th>NO</th>
+                      <th>Negara</th>
+                      <th>Positif</th>
+                      <th>Sembuh</th>
+                      <th>Meninggal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $i= 1; ?>
+                    @foreach($global as $row)
+                    <tr>
+                      <td><?= $i++; ?></td>
+                      <td>{{ $row["attributes"]["Country_Region"] }}</td>
+                      <td>{{ $row["attributes"]["Confirmed"] }}</td>
+                      <td>{{ $row["attributes"]["Recovered"] }}</td>
+                      <td>{{ $row["attributes"]["Deaths"] }}</td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= END Global Data ============== -->
+
+
 
 
     <!-- ================ info ==================== -->
