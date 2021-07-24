@@ -77,51 +77,70 @@ $indonesia = $indonesia[0];
           </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row vaksinasi">
           <div class="col">
             <div class="card">
-              <div class="card-body">
+              <div class="card">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
                     <h5 class="text-info mt-5">Ayo daftar vakasinasi sekarang!</h5>
                     <p>Klik tombol dibawah untuk melakukan<br> pendaftaran vaksinasi</p>
                     <a href="" class="btn btn-info">Daftar</a>
                   </div>
-                  <div class="col-md-4">
-                    <img src="{{ asset('img/vaksinasi-1.jpg') }}" class="img-fluid" >
+                  <div class="col-md-5 d-none d-md-block">
+                    <img src="{{ asset('img/vaksinasi-1.jpg') }}" class="img-fluid">
                   </div>
                 </div>
               </div>
             </div>
+        </div> -->
+
+        <div class="row mt-3">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-5">
+                    <h5 class="text-info mt-5">Ayo Daftar Vaksinasi Sekarang</h5>
+                    <p>Klik tombol dibawah untuk melakukan<br> pendaftaran vaksinasi</p>
+                    <a href="" class="btn btn-info">Daftar</a>
+                  </div>
+                  <div class="col-md-4">
+                    <img src="{{ asset('img/vaksinasi-1.jpg') }}" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="row mt-5">
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
             <div class="card">
               <div class="card-body">
                 <h5 class="text-center">TOTAL POSITIF</h5>
-                <h3 class="card-text text-center text-warning"><?= $positif["value"]; ?></h3>
+                <h3 class="card-text text-center text-warning mt-3"><?= $positif["value"]; ?></h3>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
             <div class="card">
               <div class="card-body">
                 <h5 class="text-center">TOTAL SEMBUH</h5>
-                <h3 class="card-text text-center text-success"><?= $sembuh["value"]; ?></h3>
+                <h3 class="card-text text-center text-success mt-3"><?= $sembuh["value"]; ?></h3>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
             <div class="card">
               <div class="card-body">
                 <h5 class="text-center">TOTAL MENINGGAL</h5>
-                <h3 class="card-text text-center text-danger"><?= $meninggal["value"]; ?></h3>
+                <h3 class="card-text text-center text-danger mt-3"><?= $meninggal["value"]; ?></h3>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
             <div class="card">
               <div class="card-body">
                 <h3 class="text-center">INDONESIA</h3>
