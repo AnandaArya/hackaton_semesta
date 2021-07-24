@@ -88,14 +88,14 @@
           </div>
         </section>
       </div>
-      <footer class="main-footer fixed-bottom">
+      <!-- <footer class="main-footer fixed-bottom">
         <div class="footer-left">
           Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="#">Ananda Arya Pratama</a>
         </div>
         <div class="footer-right">
           2.3.0
         </div>
-      </footer>
+      </footer>-->
     </div>
   </div>
 
