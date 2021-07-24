@@ -100,12 +100,12 @@ $indonesia = $indonesia[0];
             <div class="card">
               <div class="card-body">
                 <div class="row justify-content-center">
-                  <div class="col-md-5">
-                    <h5 class="text-info mt-5">Ayo Daftar Vaksinasi Sekarang</h5>
-                    <p>Klik tombol dibawah untuk melakukan<br> pendaftaran vaksinasi</p>
-                    <a href="" class="btn btn-info">Daftar</a>
+                  <div class="col-lg-5 text-center text-lg-left">
+                    <h5 class="text-info mt-5 text-center text-lg-left">Ayo Daftar Vaksinasi Sekarang</h5>
+                    <p class="text-center text-lg-left">Klik tombol dibawah untuk melakukan<br> pendaftaran vaksinasi</p>
+                    <a href="" class="btn btn-info text-center text-lg-left">Daftar</a>
                   </div>
-                  <div class="col-md-4">
+                  <div class="d-none d-lg-block col-lg-4">
                     <img src="{{ asset('img/vaksinasi-1.jpg') }}" class="img-fluid">
                   </div>
                 </div>
