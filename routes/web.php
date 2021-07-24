@@ -39,4 +39,15 @@ Route::group(['middleware' => ['auth', 'CekLevel:admin']], function () {
     Route::put('/pendaftars/{pendaftar}', 'PendaftarsController@update');
     Route::delete('/pendaftars/{pendaftar}', 'PendaftarsController@destroy');
     Route::get('/pendaftars/search', 'PendaftarsController@search');
+
+
+     //Vaksins Route
+    Route::get('/vaksins', 'vaksinsController@index');
+    Route::get('/vaksins/create', 'vaksinsController@create');
+    Route::post('/vaksins/store', 'vaksinsController@store');
+    Route::get('/vaksins/{vaksin}/edit', 'vaksinsController@edit');
+    Route::get('/vaksins/{vaksin}/detail', 'vaksinsController@show');
+    Route::put('/vaksins/{vaksin}', 'vaksinsController@update');
+    Route::delete('/vaksins/{vaksin}', 'vaksinsController@destroy');
+    Route::get('/vaksins/search', 'vaksinsController@search');
 });

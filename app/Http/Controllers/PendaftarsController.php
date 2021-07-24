@@ -19,6 +19,13 @@ class PendaftarsController extends Controller
         return view('pendaftars/index', compact('pendaftars'));
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $pendaftars = Pendaftar::where('nama', 'LIKE', "%$search%")->orWhere('nik', 'LIKE', "%$search%")->orWhere('no_hp', 'LIKE', "%$search%")->paginate(5);
+        return view('pendaftars/index', compact('pendaftars'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -68,7 +75,7 @@ class PendaftarsController extends Controller
      */
     public function show(Pendaftar $pendaftar)
     {
-        //
+        return view('pendaftars/detail', compact('pendaftar'));
     }
 
     /**

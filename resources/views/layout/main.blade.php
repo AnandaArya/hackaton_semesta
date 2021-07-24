@@ -64,7 +64,7 @@
                 <a href="{{ url('/pendaftars') }}" class="nav-link"><i class="fas fa-envelope"></i> <span>Pendaftar</span></a>
               </li>
               <li class="nav-item dropdown">
-                <a href="{{ url('/games') }}" class="nav-link"><i class="fas fa-gamepad"></i> <span>Game</span></a>
+                <a href="{{ url('/vaksins') }}" class="nav-link"><i class="fas fa-gamepad"></i> <span>Vaksin</span></a>
               </li>
               <li class="nav-item dropdown">
                 <a href="{{ url('/webs') }}" class="nav-link"><i class="fab fa-chrome"></i> <span>Web</span></a>
