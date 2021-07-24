@@ -65,6 +65,8 @@ $indonesia = $indonesia[0];
     </nav>
 
     <!-- ================== About ==================== -->
+
+   
     <section class="about">
       <div class="container">
         
@@ -73,6 +75,24 @@ $indonesia = $indonesia[0];
             <h2 class="text-center">CEGAH CORONA</h2>
             <p class="text-center">Data COVID-19 Global dan Indonesia Realtime</p>
           </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <h5 class="text-info mt-5">Ayo daftar vakasinasi sekarang!</h5>
+                    <p>Klik tombol dibawah untuk melakukan<br> pendaftaran vaksinasi</p>
+                    <a href="" class="btn btn-info">Daftar</a>
+                  </div>
+                  <div class="col-md-4">
+                    <img src="{{ asset('img/vaksinasi-1.jpg') }}" class="img-fluid" >
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
 
         <div class="row mt-5">
