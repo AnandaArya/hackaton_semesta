@@ -179,15 +179,15 @@ $indonesia = $indonesia[0];
                   </thead>
                   <tbody>
                     <?php $i= 1; ?>
-                    <?php foreach($global as $row) : ?>
+                    @foreach($global as $row)
                     <tr>
                       <td><?= $i++; ?></td>
-                      <td><?= $row["attributes"]["Country_Region"]; ?></td>
-                      <td><?= $row["attributes"]["Confirmed"]; ?></td>
-                      <td><?= $row["attributes"]["Recovered"]; ?></td>
-                      <td><?= $row["attributes"]["Deaths"]; ?></td>
+                      <td>{{ $row["attributes"]["Country_Region"] }}</td>
+                      <td>{{ $row["attributes"]["Confirmed"] }}</td>
+                      <td>{{ $row["attributes"]["Recovered"] }}</td>
+                      <td>{{ $row["attributes"]["Deaths"] }}</td>
                     </tr>
-                    <?php endforeach; ?>
+                    @endforeach
                   </tbody>
                 </table>
               </div>
@@ -259,7 +259,7 @@ $indonesia = $indonesia[0];
       <div class="container">
         <div class="row">
           <div class="col text-center p-3">
-            <small class="text-light">&copy Copyright 2020 <a href="https://github.com/AnandaArya">Ananda Arya</a> | All Right Reservered</small>
+            <!-- <small class="text-light">&copy Copyright 2020 <a href="https://github.com/AnandaArya">Ananda Arya</a> | All Right Reservered</small> -->
           </div>
         </div>
       </div>
