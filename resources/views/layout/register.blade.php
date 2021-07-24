@@ -48,53 +48,22 @@
                         <input id="nama" type="text" class="form-control" required="required" name="name" autofocus>
                       </div>
                     </div>
-                    <div class="form-group col-6">
-                        <label for="no_telp">No Telp</label>
-                        <input id="no_telp" type="text" class="form-control" name="no_telp" required="required">
-                        <div class="invalid-feedback">
-                      </div>
 
-
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input id="email" type="email" class="form-control" name="email" required="required">
-                      <div class="invalid-feedback">
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="password" class="d-block">Password</label>
-                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password" required="required">
-                      <div id="pwindicator" class="pwindicator">
-                        <div class="bar"></div>
-                        <div class="label"></div>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" name="agree" class="custom-control-input" id="agree" onclick="showPassword()">
-                        <label class="custom-control-label" for="agree">Show Password</label>
-                      </div>
-                    </div>
 
                     <div class="row">
                       <div class="form-group col-6">
-                        <label>Jenis Kelamin</label>
-                        <select class="form-control selectric" name="jenis_kelamin">
-                          <option value="Laki-laki">Laki-laki</option>
-                          <option value="prempuan">Prempuan</option>
-                        </select>
+                        <label>Pekerjaan</label>
+                        <input type="text" name="tgl_lahir" class="form-control" required="required">
                       </div>
-
-                    </div>
-
-
+                      <div class="form-group col-6">
+                        <label>NO HP</label>
+                        <input type="number" name="tgl_lahir" class="form-control" required="required">
+                      </div>
                     </div>
                     <div class="row">
                       <div class="form-group col-6">
-                        <label>Alamat</label>
-                        <input type="text" name="alamat" class="form-control" required="required">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" name="tgl_lahir" class="form-control" required="required">
                       </div>
                       <div class="form-group col-6">
                         <label>Gambar</label>
