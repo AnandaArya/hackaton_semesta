@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('api/statistik');
 });
 
-Route::get('/login', function () {
+Route::get('/home', function () {
     return view('layout/auth');
 })->name('login');
+
+
+Route::post('/postlogin', 'LoginController@postLogin')->name('postlogin');
+Route::get('/daftar', 'LoginController@daftar');
+Route::post('/daftar/store', 'LoginController@store');
+Route::get('/logout', 'LoginController@logout')->name('logout');
