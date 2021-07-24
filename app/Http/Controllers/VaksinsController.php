@@ -16,7 +16,7 @@ class VaksinsController extends Controller
     {
         //
         $vaksins = Vaksin::paginate(5);
-        return view('vaksins/index', compact('pendaftars'));
+        return view('vaksins/index', compact('vaksins'));
     }
 
     /**
