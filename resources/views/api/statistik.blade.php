@@ -103,7 +103,7 @@ $indonesia = $indonesia[0];
                   <div class="col-lg-5 text-center text-lg-left">
                     <h5 class="text-info mt-5 text-center text-lg-left">Ayo Daftar Vaksinasi Sekarang</h5>
                     <p class="text-center text-lg-left">Klik tombol dibawah untuk melakukan<br> pendaftaran vaksinasi</p>
-                    <a href="" class="btn btn-info text-center text-lg-left">Daftar</a>
+                    <a href="{{ url('/daftar') }}" class="btn btn-info text-center text-lg-left">Daftar</a>
                   </div>
                   <div class="d-none d-lg-block col-lg-4">
                     <img src="{{ asset('img/vaksinasi-1.jpg') }}" class="img-fluid">
