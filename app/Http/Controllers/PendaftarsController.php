@@ -64,7 +64,7 @@ class PendaftarsController extends Controller
         $gambarFile->move(public_path().'/img', $namaFile);
         $pendaftar->save();
 
-        return redirect('/');
+        return redirect('/')->with('status', 'Anda berhasil mendaftar!');
     }
 
     /**

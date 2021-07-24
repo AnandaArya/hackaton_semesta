@@ -69,6 +69,15 @@ $indonesia = $indonesia[0];
    
     <section class="about">
       <div class="container">
+
+        @if (session('status'))
+          <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+            {{ session('status') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        @endif
         
         <div class="row judul">
           <div class="col mt-4">
