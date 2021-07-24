@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('api/statistik');
 });
 
-Route::get('/home', function () {
+Route::get('/login', function () {
     return view('layout/auth');
 })->name('login');
 
@@ -26,3 +26,7 @@ Route::post('/postlogin', 'LoginController@postLogin')->name('postlogin');
 Route::get('/daftar', 'LoginController@daftar');
 Route::post('/daftar/store', 'LoginController@store');
 Route::get('/logout', 'LoginController@logout')->name('logout');
+
+Route::group(['middleware' => ['auth', 'CekLevel:admin']], function () {
+    Route::get('/home', 'LoginController@index');
+});
