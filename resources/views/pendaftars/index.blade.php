@@ -62,13 +62,12 @@
                   <td>{{ $pendaftar->tgl_vaksin }}</td>
                   <td>{{ $pendaftar->status }}</td>
                   <td>
-                    <a href="{{ url('pendaftars/'.$pendaftar->id.'/detail') }}" class="btn btn-success btn-action" data-toggle="tooltip" title="Detail"><i class="fas fa-eye"></i></a>
-                    <a href="{{ url('pendaftars/'.$pendaftar->id.'/edit') }}" class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+                    <a href="{{ url('pendaftars/'.$pendaftar->id.'/detail') }}" class="btn btn-primary btn-action" data-toggle="tooltip" title="Detail"><i class="fas fa-eye"></i></a>
                     <form action="{{ url('pendaftars/'.$pendaftar->id) }}" method="post" class="d-inline">
                                 @method('DELETE')
                                 @csrf
                       <!-- <button type="submit" class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Apa anda yakin ingin menghapus data?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></button> -->
-                      <button type="submit" class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete"><i class="fas fa-check-circle"></i></button>
+                      <button type="submit" class="btn btn-success btn-action" data-toggle="tooltip" title="Success"><i class="fas fa-check-circle"></i></button>
                     </form>
                   </td>
                 </tr>
