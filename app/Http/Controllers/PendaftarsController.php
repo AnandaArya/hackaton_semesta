@@ -121,7 +121,7 @@ class PendaftarsController extends Controller
         }
 
         // kita hapus data Pendaftar berdasarkan id
-        Pendaftar::destroy($Pendaftar->id);
+        Pendaftar::destroy($pendaftar->id);
 
         return redirect('/pendaftars');
     }
