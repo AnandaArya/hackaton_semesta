@@ -4,12 +4,11 @@
 function get_CURL($url) {
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $url);
-    // bisa banyak opsi, kita pengen data yang dikembalikan adalah text(JSON) di isi true atau 1 agar kembaliannya json
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $result = curl_exec($curl);
     curl_close($curl);
     
-    return json_decode($result, true); //true berarti json menjadi array
+    return json_decode($result, true); 
 }
 
 $global = get_CURL('https://api.kawalcorona.com');
@@ -23,6 +22,7 @@ $meninggal = get_CURL('https://api.kawalcorona.com/meninggal/');
 $provinsi = get_CURL('https://api.kawalcorona.com/indonesia/provinsi/');
 
 $indonesia = get_CURL('https://api.kawalcorona.com/indonesia/');
+$rumahsakit = get_CURL('https://dekontaminasi.com/api/id/covid19/hospitals');
 $indonesia = $indonesia[0];
 
 
@@ -40,6 +40,7 @@ $indonesia = $indonesia[0];
     
     <!-- font assets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto|Roboto+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ec96cf5f4a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -49,7 +50,7 @@ $indonesia = $indonesia[0];
   <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
       <div class="container">
-        <a class="navbar-brand" href="#"><i class="fas fa-shield-alt"> CEGAH CORONA</i></a>
+        <a class="navbar-brand" href="#"><i class="fas fa-shield-alt">CEGAH CORONA</i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -186,6 +187,51 @@ $indonesia = $indonesia[0];
                       <td>{{ $row["attributes"]["Confirmed"] }}</td>
                       <td>{{ $row["attributes"]["Recovered"] }}</td>
                       <td>{{ $row["attributes"]["Deaths"] }}</td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= END Global Data ============== -->
+
+    <!-- ================= Data Rumah Sakit Rujukan ============== -->
+    <section class="global mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>Daftar Rumah Sakit Rujukan</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="table tableFixHead">
+                <table>
+                  <thead>
+                    <tr class="judulTable">
+                      <th>NO</th>
+                      <th>Rumah Sakit</th>
+                      <th>Provinsi</th>
+                      <th>Kota</th>
+                      <th>Alamat</th>
+                      <th>NO Telepon</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $i= 1; ?>
+                    @foreach($rumahsakit as $row)
+                    <tr>
+                      <td><?= $i++; ?></td>
+                      <td>{{ $row["name"] }}</td>
+                      <td>{{ $row["province"] }}</td>
+                      <td>{{ $row["region"] }}</td>
+                      <td>{{ $row["address"] }}</td>
+                      <td>{{ $row["phone"] }}</td>
+                    
                     </tr>
                     @endforeach
                   </tbody>
