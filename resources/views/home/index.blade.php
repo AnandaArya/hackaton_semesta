@@ -32,9 +32,10 @@
 							</div>
 							<div class="card-wrap">
 								<div class="card-header">
-									<h4>Total Akun</h4>
+									<h4>Stok Vaksin</h4>
 								</div>
 								<div class="card-body">
+                                    Tersedia
 								</div>
 							</div>
 						</div>
@@ -46,9 +47,10 @@
 							</div>
 							<div class="card-wrap">
 								<div class="card-header">
-									<h4>Akun Email</h4>
+									<h4>Total Pendaftar</h4>
 								</div>
 								<div class="card-body">
+                                    120
 								</div>
 							</div>
 						</div>

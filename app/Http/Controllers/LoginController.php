@@ -26,7 +26,7 @@ class LoginController extends Controller
 
     public function daftar()
     {
-        return view('layouts/register');
+        return view('layout/register');
     }
 
     public function store(Request $request)
