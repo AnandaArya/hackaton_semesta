@@ -29,4 +29,14 @@ Route::get('/logout', 'LoginController@logout')->name('logout');
 
 Route::group(['middleware' => ['auth', 'CekLevel:admin']], function () {
     Route::get('/home', 'LoginController@index');
+
+     // Pendaftar Route
+    Route::get('/pendaftars', 'PendaftarsController@index');
+    Route::get('/pendaftars/create', 'PendaftarsController@create');
+    Route::post('/pendaftars/store', 'PendaftarsController@store');
+    Route::get('/pendaftars/{pendaftar}/edit', 'PendaftarsController@edit');
+    Route::get('/pendaftars/{pendaftar}/detail', 'PendaftarsController@show');
+    Route::put('/pendaftars/{pendaftar}', 'PendaftarsController@update');
+    Route::delete('/pendaftars/{pendaftar}', 'PendaftarsController@destroy');
+    Route::get('/pendaftars/search', 'PendaftarsController@search');
 });

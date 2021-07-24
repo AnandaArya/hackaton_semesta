@@ -27,25 +27,25 @@
             <div class="card card-primary">
               <div class="card-header"><h4>Daftar Vaksinasi</h4></div>
 
-              <form action="{{ url('daftar/store') }}" method="POST" enctype='multipart/form-data'>
+              <form action="{{ url('pendaftars/store') }}" method="POST" enctype='multipart/form-data'>
               @csrf
                 <div class="card-body">
                     <div class="row">
                       <div class="form-group col-12">
                         <label for="nama">Nama Lengkap</label>
-                        <input id="nama" type="text" class="form-control" required="required" name="name" autofocus>
+                        <input id="nama" type="text" class="form-control" required="required" name="nama" autofocus>
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group col-12">
-                        <label for="nama">NIK</label>
-                        <input id="nama" type="text" class="form-control" required="required" name="name" autofocus>
+                        <label for="nik">NIK</label>
+                        <input id="nik" type="text" class="form-control" required="required" name="nik">
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group col-12">
-                        <label for="nama">Alamat</label>
-                        <input id="nama" type="text" class="form-control" required="required" name="name" autofocus>
+                        <label for="alamat">Alamat</label>
+                        <input id="alamat" type="text" class="form-control" required="required" name="alamat">
                       </div>
                     </div>
 
@@ -53,11 +53,12 @@
                     <div class="row">
                       <div class="form-group col-6">
                         <label>Pekerjaan</label>
-                        <input type="text" name="tgl_lahir" class="form-control" required="required">
+                        <input type="text" name="pekerjaan" class="form-control" required="required">
+                        <input type="hidden" name="tgl_vaksin" class="form-control" required="required" value=<?= date('Y-m-d');?>">
                       </div>
                       <div class="form-group col-6">
                         <label>NO HP</label>
-                        <input type="number" name="tgl_lahir" class="form-control" required="required">
+                        <input type="number" name="no_hp" class="form-control" required="required">
                       </div>
                     </div>
                     <div class="row">

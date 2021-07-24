@@ -59,9 +59,9 @@
               <li class="nav-item dropdown">
                 <a href="{{ url('/home') }}" class="nav-link"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
               </li>
-              <li class="menu-header">Account</li>
+              <li class="menu-header">Data</li>
               <li class="nav-item dropdown">
-                <a href="{{ url('/emails') }}" class="nav-link"><i class="fas fa-envelope"></i> <span>Email</span></a>
+                <a href="{{ url('/pendaftars') }}" class="nav-link"><i class="fas fa-envelope"></i> <span>Pendaftar</span></a>
               </li>
               <li class="nav-item dropdown">
                 <a href="{{ url('/games') }}" class="nav-link"><i class="fas fa-gamepad"></i> <span>Game</span></a>

@@ -15,6 +15,8 @@ class PendaftarsController extends Controller
     public function index()
     {
         //
+        $pendaftars = Pendaftar::paginate(5);
+        return view('pendaftars/index', compact('pendaftars'));
     }
 
     /**
@@ -36,6 +38,26 @@ class PendaftarsController extends Controller
     public function store(Request $request)
     {
         //
+        $gambarFile = $request->gambar;
+        $namaFile = uniqid().".".$gambarFile->getClientOriginalExtension();
+
+        $pendaftar = new pendaftar;
+        $pendaftar->nama = $request->nama;
+        $pendaftar->nik = $request->nik;
+        $pendaftar->alamat = $request->alamat;
+        $pendaftar->pekerjaan = $request->pekerjaan;
+        $pendaftar->no_hp = $request->no_hp;
+        $pendaftar->tgl_lahir = $request->tgl_lahir;
+        $pendaftar->tgl_vaksin = $request->tgl_vaksin;
+        $pendaftar->id_vaksin = '1';
+        $pendaftar->status = 'proses';
+        $pendaftar->gambar = $namaFile;
+
+        // kita pindahkan file gambar ke folder public/img dengan diganti namanya $namaFile
+        $gambarFile->move(public_path().'/img', $namaFile);
+        $pendaftar->save();
+
+        return redirect('/');
     }
 
     /**
