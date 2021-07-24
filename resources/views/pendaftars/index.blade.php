@@ -68,7 +68,7 @@
                                 @method('DELETE')
                                 @csrf
                       <!-- <button type="submit" class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Apa anda yakin ingin menghapus data?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></button> -->
-                      <button type="submit" class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete"><i class="fas fa-trash"></i></button>
+                      <button type="submit" class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete"><i class="fas fa-check-circle"></i></button>
                     </form>
                   </td>
                 </tr>
@@ -81,4 +81,5 @@
         </div>
       </div>
     </div>
+
   @endsection

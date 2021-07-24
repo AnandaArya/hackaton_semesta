@@ -86,7 +86,7 @@ class PendaftarsController extends Controller
      */
     public function edit(Pendaftar $pendaftar)
     {
-        //
+        //  
     }
 
     /**
@@ -110,5 +110,19 @@ class PendaftarsController extends Controller
     public function destroy(Pendaftar $pendaftar)
     {
         //
+        $data = Pendaftar::findorfail($pendaftar->id);
+        // lalu kia cari nama gambar yang sudah ada di variable $data -> didalam folder public/img
+        $file = public_path('/img/').$data->gambar;
+
+        // cek jika gambar ada
+        if(file_exists($file)) {
+            // maka hapus filenya yang ada di folder public/img
+            @unlink($file);
+        }
+
+        // kita hapus data Pendaftar berdasarkan id
+        Pendaftar::destroy($Pendaftar->id);
+
+        return redirect('/pendaftars');
     }
 }
