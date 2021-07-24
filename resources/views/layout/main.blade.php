@@ -32,7 +32,6 @@
         </form>
         <ul class="navbar-nav navbar-right">
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="{{ asset('img/'.auth()->user()->gambar) }}" class="rounded-circle mr-1">
             <div class="d-sm-none d-lg-inline-block">Hai, {{ auth()->user()->name }}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <a href="{{ url('/profiles') }}" class="dropdown-item has-icon">
@@ -61,19 +60,14 @@
               </li>
               <li class="menu-header">Data</li>
               <li class="nav-item dropdown">
-                <a href="{{ url('/pendaftars') }}" class="nav-link"><i class="fas fa-envelope"></i> <span>Pendaftar</span></a>
+                <a href="{{ url('/pendaftars') }}" class="nav-link"><i class="fas fa-user"></i> <span>Pendaftar</span></a>
               </li>
               <li class="nav-item dropdown">
-                <a href="{{ url('/vaksins') }}" class="nav-link"><i class="fas fa-gamepad"></i> <span>Vaksin</span></a>
+                <a href="{{ url('/vaksins') }}" class="nav-link"><i class="fas fa-syringe"></i> <span>Vaksin</span></a>
               </li>
-              <li class="nav-item dropdown">
-                <a href="{{ url('/webs') }}" class="nav-link"><i class="fab fa-chrome"></i> <span>Web</span></a>
-              </li>
+
               <li class="menu-header">Setting</li>
 
-              <li class="nav-item dropdown">
-                <a href="{{ url('/profiles') }}" class="nav-link"><i class="fas fa-user"></i> <span>Profile</span></a>
-              </li>
               <li class="nav-item dropdown">
                 <a href="{{ url('/logout') }}" class="nav-link"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
               </li>

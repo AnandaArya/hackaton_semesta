@@ -2,10 +2,13 @@
 @section('php')
 <?php 
 	// use App\Email;
-	// use App\Game;
+	use App\Pendaftar;
+    use App\Vaksin;
+
 	// use App\Web;
 
-	// $totalEmails = Email::where('users_id', auth()->user()->id)->count();
+	$totalPendaftars = Pendaftar::count();
+    $vaksinasi = Vaksin::all();
 	// $totalGames = Game::where('users_id', auth()->user()->id)->count();
 	// $totalWebs = Web::where('users_id', auth()->user()->id)->count();
 
@@ -34,55 +37,30 @@
 								<div class="card-header">
 									<h4>Stok Vaksin</h4>
 								</div>
+                                @foreach($vaksinasi as $vaksin)
 								<div class="card-body">
-                                    Tersedia
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-						<div class="card card-statistic-1">
-							<div class="card-icon bg-primary">
-								<i class="far fa-envelope"></i>
-							</div>
-							<div class="card-wrap">
-								<div class="card-header">
-									<h4>Total Pendaftar</h4>
-								</div>
-								<div class="card-body">
-                                    120
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-						<div class="card card-statistic-1">
-							<div class="card-icon bg-danger">
-								<i class="fas fa-gamepad"></i>
-							</div>
-							<div class="card-wrap">
-								<div class="card-header">
-									<h4>Akun Game</h4>
-								</div>
-								<div class="card-body">
-								</div>
+                                    {{ $vaksin->stok }}
+                                </div>
+                                @endforeach
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6 col-12">
 						<div class="card card-statistic-1">
 							<div class="card-icon bg-warning">
-								<i class="fab fa-chrome"></i>
+								<i class="far fa-user"></i>
 							</div>
 							<div class="card-wrap">
 								<div class="card-header">
-									<h4>Akun Web</h4>
+									<h4>Total Pendaftar</h4>
 								</div>
 								<div class="card-body">
+                                    {{ $totalPendaftars }}
 								</div>
 							</div>
 						</div>
 					</div>
+					
 
 				<!-- </div> -->
 @endsection
