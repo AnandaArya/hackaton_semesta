@@ -14,7 +14,12 @@ class CreateVaksinsTable extends Migration
     public function up()
     {
         Schema::create('vaksins', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('jenis');
+            $table->string('dosis');
+            $table->string('gambar');
+            $table->string('stok');
+            $table->string('deksripsi');
             $table->timestamps();
         });
     }

@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('api/statistik');
 });
+
+Route::get('/login', function () {
+    return view('layout/auth');
+})->name('login');
